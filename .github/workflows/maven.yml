@@ -67,5 +67,5 @@ jobs:
       - name: Wait for application to start
         run: Start-Sleep -s 10  # Adjust the wait time if necessary
 
-      - name: Launch default browser
-        run: start http://localhost:8080  # Replace with the appropriate URL for your application
+      - name: Launch Chrome browser
+        run: start chrome http://localhost:8080
