@@ -62,4 +62,4 @@ jobs:
           docker stop servertask || true
           docker rm servertask || true
           docker pull munwarali/servertask:latest
-          docker run -d --restart=always --name servertask -p 0.0.0.0:8080:8080 munwarali/servertask:latest
+          docker run -d --restart always --name servertask -p 8080:8080 munwarali/servertask:latest
