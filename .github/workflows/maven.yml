@@ -33,7 +33,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v6
         name: Build & push Docker image
         with:
-          image: munwarali/munna
+          image: munwarali/servertask
           tags: latest
           registry: docker.io
           dockerfile: Dockerfile
@@ -59,10 +59,10 @@ jobs:
 
       - name: Deploy to production
         run: |
-          docker stop munna || true
-          docker rm munna || true
-          docker pull munwarali/munna:latest
-          docker run -d --restart=always --name servertask -p 0.0.0.0:8080:8080 munwarali/munna:latest
+          docker stop servertask || true
+          docker rm servertask || true
+          docker pull munwarali/servertask:latest
+          docker run -d --restart=always --name servertask -p 0.0.0.0:8080:8080 munwarali/servertask:latest
 
       - name: Wait for application to start
         run: Start-Sleep -s 10  # Adjust the wait time if necessary
