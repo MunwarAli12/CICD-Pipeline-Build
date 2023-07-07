@@ -18,4 +18,4 @@ Create a CI-CD pipeline for a sample application using any CI-CD tool of your ch
 
 
 ## Result,
-- As a result, established a CI-CD pipeline for a spring boot application built using Maven and use the CI-CD tool Github Actions. The pipeline now includes a code build and a docker build step. cmd Prompt:
+- As a result, established a CI-CD pipeline for a spring boot application built using Maven and use the CI-CD tool Github Actions. The pipeline now includes a code build and a docker build step.
