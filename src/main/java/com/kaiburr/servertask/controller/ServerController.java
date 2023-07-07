@@ -26,19 +26,34 @@ public class ServerController {
 	
 	@GetMapping("/findAllServers")
 	public List<Server> getAllServers(){
-		
-		return this.serverRepository.findAll();
+		return this.serverRepository.getAllServers();
 	}
 	@GetMapping("/findServer/{id}")
 	public Optional<Server> getServers(@PathVariable int id){
 		return this.serverRepository.findById(id);
+		//mapped
+	}
+		
+	@GetMapping("/findServerByFramework/{framework}")
+	public List<Server> getServersByFramework(@PathVariable String framework){
+		return this.serverRepository.getServersByFramework(framework);
+		//mapped
+		
+	}
+	
+	@GetMapping("/findServerByLanguage/{language}")
+	public List<Server> getServersByLanguage(@PathVariable String language){
+		return this.serverRepository.getServersByLanguage(language);
+		//mapped
+		
 	}
 	
 	@GetMapping("/findServerByName/{name}")
 	public List<Server> getServersByName(@PathVariable String name){
 		return this.serverRepository.getServersByName(name);
-		
+		//mapped
 	}
+	
 	@PutMapping("/findAllServers1")
 	public List<Server> getAllServers1(){
 		return this.serverRepository.findAll();
@@ -46,27 +61,8 @@ public class ServerController {
 	
 	@PostMapping("/addServer")
 	public ResponseEntity<?> saveServer(@RequestBody Server server) {
-	    Integer serverId = server.getId();
-	    Optional<Server> existingServer = serverRepository.findById(serverId);
-	    if (existingServer.isPresent()) {
-	        // Server with the same ID already exists
-	        ResponseMessage response = new ResponseMessage();
-	        response.setStatuscode(400); // Bad Request
-	        response.setMessage("Server with ID " + serverId + " already exists");
-	        return ResponseEntity.badRequest().body(response);
-	    }
-	    
-	    serverRepository.save(server);
-	    
-	    // Server saved successfully
-	    ResponseMessage response = new ResponseMessage();
-	    response.setStatuscode(200); // OK
-	    response.setMessage("Server saved successfully");
-	    response.setData(server);
-	    return ResponseEntity.ok(response);
+	    return serverRepository.findById(server.getId()).isPresent() ? ResponseEntity.badRequest().body("Server with ID " + server.getId() + " already exists") : ResponseEntity.ok(serverRepository.save(server) != null ? "Server saved successfully" : "Failed to save server");
 	}
-
-
 
 	@DeleteMapping("/deleteServer/{id}") 
 	public String deleteServer(@PathVariable int id) {
