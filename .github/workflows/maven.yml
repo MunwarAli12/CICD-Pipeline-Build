@@ -59,19 +59,19 @@ jobs:
 
       - name: Deploy to production
         run: |
-          - name: Checkout code
-            uses: actions/checkout@v2
+          name: Checkout code
+          uses: actions/checkout@v2
 
-          - name: Stop and remove existing container
-            run: |
-              docker stop servertask || true
-              docker rm servertask || true
+          name: Stop and remove existing container
+          run: |
+            docker stop servertask || true
+            docker rm servertask || true
 
-          - name: Pull latest image from container registry
-            run: docker pull munwarali/servertask:latest
+          name: Pull latest image from container registry
+          run: docker pull munwarali/servertask:latest
 
-          - name: Run container in detached mode
-            run: docker run -d --restart always --name servertask -p 8080:8080 munwarali/servertask:latest
+          name: Run container in detached mode
+          run: docker run -d --restart always --name servertask -p 8080:8080 munwarali/servertask:latest
 
-          - name: Display localhost URL
-            run: echo "Localhost URL: http://localhost:8080"
+          name: Display localhost URL
+          run: echo "Localhost URL: http://localhost:8080"
