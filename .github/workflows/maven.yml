@@ -56,6 +56,9 @@ jobs:
         with:
           name: servertask
           path: target/
+          
+      - name: Start the Application
+        run: java -jar target/servertask.jar
 
       - name: Deploy to production
         run: |
