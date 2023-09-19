@@ -10,15 +10,9 @@ Create a CI-CD pipeline for a sample application using any CI-CD tool of your ch
 -  ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/95939bb3-df4c-4e90-a5da-ed2fd96600a0)
 -  ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/66516aaa-90e1-46dd-b3fd-2c0a4ad6373b)
 -  ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/355893ca-f8d9-4031-a2b7-3640d31003bc)
-
-
 -  ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/ae89e6ea-33d1-45fa-bf56-4be6b4875646)
-
-- Defined a job for the Docker build step in the workflow. This includes building a Docker image, tagging it, and pushing it to a Docker registry and configured the necessary environment variables, such as the Docker hub registry login credentials.
-- ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/37873305-3d4f-4fca-9325-b0ef09bd2f82)
-
-- After that, the deployed image is downloaded and used in the target environment and runned via local host at post 8080. where we taken basic spring boot java maven built appplication.
-- A continuous integration and continuous deployment (CI/CD) pipeline is used throughout this process to automate the creation and deployment of code. Code changes set off the pipeline, which makes sure that they are tested, built, and delivered in a repeatable and dependable manner.
+- Defined a job for the Docker build step in the workflow. This includes building a Docker image, tagging it, and pushing it to a Docker registry and configured the necessary environment variables, such as the Docker hub registry login credentials. ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/37873305-3d4f-4fca-9325-b0ef09bd2f82)
+- After that, the deployed image is downloaded and used in the target environment and runned via local host at post 8080. where we taken basic spring boot java maven built appplication. A continuous integration and continuous deployment (CI/CD) pipeline is used throughout this process to automate the creation and deployment of code. Code changes set off the pipeline, which makes sure that they are tested, built, and delivered in a repeatable and dependable manner.
 
 - To deploy the application to a Kubernetes cluster, I spun up a single-node local Kubernetes cluster using Docker Desktop, Kind or Minikube, Previous we have checked and implemented all the rest api :https://github.com/MunwarAli12/model-java_REST-API_web_application-
 - now creating docker file;  ![image](https://user-images.githubusercontent.com/126280146/233519188-a0fa1923-f125-4c68-8256-cbe19d52127a.png)
