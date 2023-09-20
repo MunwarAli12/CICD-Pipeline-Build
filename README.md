@@ -1,7 +1,7 @@
 # CI CD Pipeline (Task-5)
-Create a CI-CD pipeline for a sample application using any CI-CD tool of your choice like Jenkins, Azure DevOps, Gitlab, Github Actions, AWS CodePipeline or any other tool of your choice. Include a code build and a docker build step in your pipeline.
+- Create a CI-CD pipeline for a sample application using any CI-CD tool of your choice like Jenkins, Azure DevOps, Gitlab, Github Actions, AWS CodePipeline or any other tool of your choice. Include a code build and a docker build step in your pipeline.
 ## TOOLS USED:
-- Github, Docker Desktop.
+- `SpringBootSuite` `MongoDB` `Github` `Docker` `Kubernets`
 - cloned a repository java rest api application (task-1) on GitHub.
 - Created a Dockerfile for the application that includes all the dependencies and packages needed to run the application.
 - Created a new workflow java using maven .github/workflows directory in repository and added a maven.yaml file inside it. Added the workflow in the maven.yaml file.
