@@ -14,16 +14,17 @@ Create a CI/CD pipeline for a sample application using any CI/CD tool of your ch
 
 - This includes specifying the trigger events, jobs, and steps! Defined a job for the code build step in the workflow. This includes checking out the source code, installing dependencies, and running tests.
 
-- Workflows:
-     ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/95939bb3-df4c-4e90-a5da-ed2fd96600a0)
-      
-     ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/66516aaa-90e1-46dd-b3fd-2c0a4ad6373b)
-  
-     ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/355893ca-f8d9-4031-a2b7-3640d31003bc)
-  
-     ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/ae89e6ea-33d1-45fa-bf56-4be6b4875646)
+#### Workflows:
 
-- Defined a job for the Docker build step in the workflow. This includes building a Docker image, tagging it, and pushing it to a Docker registry, and configuring the necessary environment variables, such as the Docker hub registry login credentials.
+![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/95939bb3-df4c-4e90-a5da-ed2fd96600a0)
+      
+![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/66516aaa-90e1-46dd-b3fd-2c0a4ad6373b)
+  
+![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/355893ca-f8d9-4031-a2b7-3640d31003bc)
+  
+![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/ae89e6ea-33d1-45fa-bf56-4be6b4875646)
+
+- Defined a job for the Docker build step in the workflow. This includes building a Docker image, tagging it, pushing it to a Docker registry, and configuring the necessary environment variables, such as the Docker hub registry login credentials.
 
     ![image](https://github.com/MunwarAli12/ASLICICD/assets/126280146/37873305-3d4f-4fca-9325-b0ef09bd2f82)
 
@@ -49,9 +50,7 @@ Create a CI/CD pipeline for a sample application using any CI/CD tool of your ch
 
     ![image](https://user-images.githubusercontent.com/126280146/233519703-5730a057-dcb0-47c8-9998-398aa2f8e1cc.png)
 
-- Parallelly Kubernetes created a service file (In the root project directory, created a new file named service.yaml);
-
-- Our application is made available outside of the Kubernetes cluster using a service. It serves as the load balancer, dividing up requests made to our application among the different clustered instances of the application.
+- Parallelly Kubernetes created a service file (In the root project directory, created a new file named service.yaml). This application is made available outside of the Kubernetes cluster using a service. It serves as the load balancer, dividing up requests made to our application among the different clustered instances of the application.
 
     ![image](https://user-images.githubusercontent.com/126280146/233519864-5db6626a-e26b-4259-8165-562188427c25.png)
 
@@ -77,7 +76,7 @@ Create a CI/CD pipeline for a sample application using any CI/CD tool of your ch
 ![image](https://user-images.githubusercontent.com/126280146/233522431-0789bf6f-4660-4a25-9a41-cc4767ecaf4b.png)
 ![image](https://user-images.githubusercontent.com/126280146/233522489-23450cd0-323a-4f19-b73d-14afc25642ed.png)
 
-## Result
+#### Result
 
 As a result, established a CI/CD pipeline for a Spring Boot application built using Maven and used the CI/CD tool GitHub Actions. The pipeline now includes a code build and a Docker build step.
 
