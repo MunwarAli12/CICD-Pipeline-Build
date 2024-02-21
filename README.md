@@ -1,12 +1,12 @@
 ## Problem Statement
 
-- Create a CI/CD pipeline for a sample application using any CI/CD tool of your choice like Jenkins, Azure DevOps, GitLab, GitHub Actions, AWS CodePipeline, or any other tool of your choice. Include a code build and a Docker build step in your pipeline.
+Create a CI/CD pipeline for a sample application using any CI/CD tool of your choice like Jenkins, Azure DevOps, GitLab, GitHub Actions, AWS CodePipeline, or any other tool of your choice. Include a code build and a Docker build step in your pipeline.
 
 ### Tools Used
 
 - `SpringBootSuite` `MongoDB` `Github` `Docker` `Kubernetes`
 
-- Cloned a repository for a Java REST API application [here](https://github.com/MunwarAli12/model-java_REST-API_web_application-).
+- Cloned a repository for a [Java REST API application](https://github.com/MunwarAli12/model-java_REST-API_web_application-), used github actions tool.
 
 - Created a Dockerfile for the application that includes all the dependencies and packages needed to run the application.
 
